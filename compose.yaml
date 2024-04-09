@@ -1,6 +1,6 @@
 services:
   server:
-    platform: linux/x86_64
+    platform: "linux/${ARCH:-amd64}"
     build:
       context: .
     ports:
@@ -17,7 +17,6 @@ services:
         - action: rebuild
           path: .
   db:
-    platform: linux/x86_64
     image: postgres
     restart: always
     user: postgres
@@ -36,7 +35,6 @@ services:
       timeout: 5s
       retries: 5
 volumes:
-  platform: linux/x86_64
   db-data:
 secrets:
   db-password:
