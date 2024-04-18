@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, Docker!!!!'
+    return 'Hello, Docker!!!! Today is Thursday April 18!!!!'
 
 
 # @app.route('/widgets')
